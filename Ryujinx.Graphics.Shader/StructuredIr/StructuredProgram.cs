@@ -169,8 +169,9 @@ namespace Ryujinx.Graphics.Shader.StructuredIr
 
                 if (operation is TextureOperation texOp)
                 {
-                    if (texOp.Inst == Instruction.ImageLoad || texOp.Inst == Instruction.ImageStore || 
-                        texOp.Inst == Instruction.ImageAtomic || texOp.Inst == Instruction.ImageReduce)
+                    if (texOp.Inst == Instruction.ImageLoad ||
+                        texOp.Inst == Instruction.ImageStore ||
+                        texOp.Inst == Instruction.ImageAtomic)
                     {
                         dest.VarType = texOp.Format.GetComponentType();
                     }
